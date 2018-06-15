@@ -91,7 +91,7 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 ```shell
-./mg.py
+sudo ./mg.py
 ```
 
 --------------------
@@ -166,7 +166,7 @@ MG Community Edition tiene payloads para:
 Más plataformas y payloads para diferentes sistemas operativos (Windows 10, Linux, MacOS) serán incluidas en futuras versiones, ¡espéralas!
 --------------------
 
-##Sobre los Payloads "Reverse Shell" y "Download File"
+## Sobre los Payloads "Reverse Shell" y "Download File"
 
 El payload Reverse Shell requiere que previamente se configure los parametros "YOUR_IP", "YOUR_PORT" con su información correspondiente, estos parametros los encuentra en la linea 170 del archivo core/rubber_ducky_payloads.txt (para el caso de Rubber Ducky) y en la linea 426 del archivo core/arduino_payloads_en.txt (para el caso de Arduino con teclado en ingles).
 
@@ -189,7 +189,7 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 ```shell
-./mg.py
+sudo ./mg.py
 ```
 --------------------
 
