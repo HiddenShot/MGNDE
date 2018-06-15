@@ -82,7 +82,7 @@ Arduino
 git clone https://github.com/HiddenShot/MGNDE.git
 ```
 ```shell
-cd MG
+cd MGNDE
 ```
 ```shell
 sudo chmod +x install.sh
@@ -180,7 +180,7 @@ El payload Download File permite descargar un archivo desde powershell y ejecuta
 git clone https://github.com/HiddenShot/MGNDE.git
 ```
 ```shell
-cd MG
+cd MGNDE
 ```
 ```shell
 sudo chmod +x install.sh
